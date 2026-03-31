@@ -1,0 +1,13 @@
+{
+  "name": "flashcard-app",
+  "version": "1.0.0",
+  "description": "A simple flashcard study tool",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.8.0"
+  }
+}
