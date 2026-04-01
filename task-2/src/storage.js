@@ -10,16 +10,7 @@ import { dirname, join } from 'path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_FILE = join(__dirname, '../data/data.json');
 
-// --- helpers (you will remove these when you switch to SQLite) ---
 
-function readData() {
-  const raw = readFileSync(DATA_FILE, 'utf-8');
-  return JSON.parse(raw);
-}
-
-function writeData(data) {
-  writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf-8');
-}
 
 // ----------------------------------------------------------------
 // Decks

@@ -48,5 +48,13 @@ WHERE id = 101;
 -- ### Bonus questions (optional)
 
 -- **Bonus A** — How many books are there per genre? Show the genre name and the count, ordered from most to fewest books.
+SELECT genre, COUNT(*) AS count
+FROM books
+GROUP BY genre
+ORDER BY count DESC;
 
 -- **Bonus B** — Find any authors in the database who have no books at all. (Hint: you will need a LEFT JOIN and check for NULL.)
+SELECT a.id, a.first_name, a.last_name
+FROM authors a
+LEFT JOIN books b ON b.author_id = a.id
+WHERE b.id IS NULL;
